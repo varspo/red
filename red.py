@@ -59,7 +59,6 @@ for k, table in positionTable.items():
     padrow = lambda row: (0,) + tuple(x+piece[k] for x in row) + (0,)
     positionTable[k] = sum((padrow(table[i*8:i*8+8]) for i in range(8)), ())
     positionTable[k] = (0,)*20 + positionTable[k] + (0,)*20
-    print(positionTable['P'])
 # The board is represented using a FEN string. 
 # This is a standard across the engines I've looked at.
 # About FEN: https://bit.ly/3A8ulUc (chess.com)
